@@ -59,7 +59,7 @@
   "requireLineFeedAtFileEnd": true,
   // Naming
   "disallowDanglingUnderscores": true,
-  "requireCamelCaseOrUpperCaseIdentifiers": true,
+  "requireCamelCaseOrUpperCaseIdentifiers": {"ignoreProperties": true},
   // Object Literals
   "requireObjectKeysOnNewLine": true,
   "requireObjectKeysOnNewLine": {
@@ -70,12 +70,22 @@
   // Quotes, Semicolons, Braces, IIFE
   "requireSemicolons": true,
   "validateQuoteMarks": {"mark": "'", "escape": true},
-  "requireCurlyBraces": true,
+  "requireCurlyBraces": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "try",
+    "catch",
+    "switch"
+  ],
+  "disallowCurlyBraces": ["case", "default"],
   "requireParenthesesAroundIIFE": true,
   // Validation
   "validateIndentation": 2,
   "validateLineBreaks": {"character": "LF", "reportOncePerFile": true},
-  "validateNewlineAfterArrayElements": true,
+  "validateNewlineAfterArrayElements": {"ignoreBrackets": true},
   "disallowYodaConditions": true,
   "disallowNestedTernaries": true,
   "maximumLineLength": 80,
