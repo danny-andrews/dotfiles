@@ -1,0 +1,20 @@
+{
+  html: {
+    links: [
+      'https://github.com/necolas/idiomatic-html',
+      'http://codeguide.co/'
+    ],
+    tools: ['https://validator.w3.org/']
+  },
+  css: {
+    links: ['http://primercss.io/scaffolding/']
+  },
+  ruby: {
+    links: 'https://github.com/bbatsov/rails-style-guide',
+    tools: 'rubocop'
+  },
+  js: {
+    links: ['http://jshint.com/', 'http://jscs.info/'],
+    tools: ['jshint', 'jscs']
+  }
+}

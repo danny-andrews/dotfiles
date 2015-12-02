@@ -1,0 +1,39 @@
+[user]
+	name = Danny Andrews
+	email = dannya@spiceworks.com
+[color]
+	ui = true
+[push]
+	default = current
+[alias]
+  st = status -s -b
+  di = diff
+  co = checkout
+  ci = commit
+  br = branch
+  pu = push -u
+  l = log --color --pretty=format:'%h %an %s %ad'
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
+  fixup = commit --amend
+  addall = add . --all
+  refreshremotes = remote update origin --prune
+  deleteremote = push origin --delete
+  partialdiff = diff --color-words
+  showconflicts = diff --name-only --diff-filter=U
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[merge]
+	tool = opendiff
+[core]
+	autocrlf = input
+  editor = subl -n -w
