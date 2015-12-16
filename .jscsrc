@@ -39,8 +39,7 @@
     "for",
     "while",
     "do",
-    "switch",
-    "try"
+    "switch"
   ],
   "requireSpaceBeforeObjectValues": true,
   "disallowSpaceAfterObjectKeys": true,
@@ -93,7 +92,7 @@
   "disallowUnusedParams": true,
   "requireAlignedMultilineParams": 2,
   // Specific Requires/Disallows
-  "disallowKeywords": ["with", "continue"],
+  "disallowKeywords": ["with", "continue", "class"],
   "safeContextKeyword": ["self"],
   "disallowImplicitTypeConversion": ["numeric", "boolean", "binary", "string"],
   "disallowMultipleVarDecl": true
