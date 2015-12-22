@@ -66,6 +66,13 @@
   },
   "disallowQuotedKeysInObjects": true,
   "requireDotNotation": true,
+  // ES6 Features
+  "requireShorthandArrowFunctions": true,
+  "disallowParenthesesAroundArrowParam": true,
+  "disallowIdenticalDestructuringNames": true,
+  "requireSpread": true,
+  "requireNumericLiterals": true,
+  "requireTemplateStrings": {"allExcept": ["stringConcatenation"]},
   // Quotes, Semicolons, Braces, IIFE
   "requireSemicolons": true,
   "validateQuoteMarks": {"mark": "'", "escape": true},
