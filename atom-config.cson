@@ -1,0 +1,19 @@
+"*":
+  core:
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
+    ]
+    telemetryConsent: "no"
+  editor:
+    fontSize: 12
+    tabType: "soft"
+  "exception-reporting":
+    userId: "444868c0-8c9e-2df5-dcdd-5267cd833e7d"
+  welcome:
+    showOnStartup: false

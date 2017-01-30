@@ -47,7 +47,6 @@
   "disallowSpaceAfterPrefixUnaryOperators": true,
   "requireSpaceBeforeBlockStatements": true,
   "disallowSpaceBeforeSemicolon": true,
-  "disallowSpacesInCallExpression": true,
   "requireSpacesInConditionalExpression": true,
   "requireSpacesInForStatement": true,
   "disallowSpacesInsideBrackets": true,
@@ -66,6 +65,7 @@
   },
   "disallowQuotedKeysInObjects": true,
   "requireDotNotation": true,
+  "disallowTrailingComma": true,
   // ES6 Features
   "requireShorthandArrowFunctions": true,
   "disallowParenthesesAroundArrowParam": true,
@@ -73,6 +73,7 @@
   "requireSpread": true,
   "requireNumericLiterals": true,
   "requireTemplateStrings": {"allExcept": ["stringConcatenation"]},
+  "requireEnhancedObjectLiterals": true,
   // Quotes, Semicolons, Braces, IIFE
   "requireSemicolons": true,
   "validateQuoteMarks": {"mark": "'", "escape": true},
@@ -99,8 +100,13 @@
   "disallowUnusedParams": true,
   "requireAlignedMultilineParams": 2,
   // Specific Requires/Disallows
+  "disallowIdentifierNames": ["arguments"],
   "disallowKeywords": ["with", "continue", "class"],
   "safeContextKeyword": ["self"],
   "disallowImplicitTypeConversion": ["numeric", "boolean", "binary", "string"],
-  "disallowMultipleVarDecl": true
+  "disallowMultipleVarDecl": true,
+  // Naming
+  "requireCamelCaseOrUpperCaseIdentifiers": true,
+  "requireCapitalizedConstructors": true,
+  "safeContextKeyword": ["_this"]
 }
