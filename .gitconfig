@@ -36,4 +36,4 @@
 	tool = opendiff
 [core]
 	autocrlf = input
-  editor = subl -n -w
+  editor = atom --wait
