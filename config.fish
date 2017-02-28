@@ -20,6 +20,9 @@ set -x PATH $PATH /sbin
 set -x PATH $PATH /usr/bin
 set -x PATH $PATH /usr/local/bin
 
+# Yarn
+set -x PATH $PATH (yarn global bin)
+
 # Node Modules
 set -x PATH $PATH /usr/local/lib/node_modules
 
