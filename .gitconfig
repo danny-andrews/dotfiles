@@ -1,6 +1,6 @@
 [user]
 	name = Danny Andrews
-	email = dannya@spiceworks.com
+	email = danny@ownlocal.com
 [color]
 	ui = true
 [push]
@@ -29,11 +29,12 @@
 	smudge = git hawser smudge %f
 	required = true
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 [merge]
 	tool = opendiff
 [core]
 	autocrlf = input
-  editor = atom --wait
+  editor = sublime -n -w

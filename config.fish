@@ -1,14 +1,23 @@
-alias copybr="git symbolic-ref --short HEAD | tr -d '\n' | pbcopy"
-alias copysha="git rev-parse --short HEAD | tr -d '\n' | pbcopy"
+alias copy-br="git symbolic-ref --short HEAD | tr -d '\n' | pbcopy"
+alias copy-sha="git rev-parse --short HEAD | tr -d '\n' | pbcopy"
 alias reload="source ~/.config/fish/config.fish"
 
-function userremotes
-  git for-each-ref --sort=-committerdate --format='%(committerdate) %(authorname) %(refname)' refs/remotes/origin/ | grep -e ".$argv" | head -n 200;
-end
-
-function openrepo
+function open-repo
   set url (git config --get remote.origin.url | sed -e 's/git@/https:\/\//g' -e 's/.com:/.com\//g' -e 's/\.git//g')
   open "$url/$argv"
+end
+
+function flattened-history
+  git rev-list --no-merges --reverse "$argv[1]..$argv[2]" | tr '\n' ' '
+end
+
+function fix-yarn-lock-conflicts
+  git checkout $argv[1] -- yarn.lock
+  yarn install
+end
+
+function deps-of-deps
+  yarn info $argv[1] | grep dependencies -A 15
 end
 
 # Suppress welcome message
@@ -26,9 +35,17 @@ set -x PATH $PATH (yarn global bin)
 # Node Modules
 set -x PATH $PATH /usr/local/lib/node_modules
 
+# Python
+set -x PATH $PATH /Library/Python/2.7/site-packages
+
+# RVM
+set -x PATH $PATH ~/.rvm/bin
+
 # Oh My Fish
 set -q XDG_DATA_HOME
   and set -gx OMF_PATH "$XDG_DATA_HOME/omf"
   or set -gx OMF_PATH "$HOME/.local/share/omf"
 
 source $OMF_PATH/init.fish
+
+rvm default

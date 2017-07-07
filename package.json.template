@@ -1,0 +1,30 @@
+{
+  "name": "@danny.andrews/[NAME]",
+  "version": "[VERSION]",
+  "description": "[DESCRIPTION]",
+  "keywords": [
+    "[KEYWORD1]"
+    "[KEYWORD2]"
+  ],
+  "license": "MIT",
+  "author": "Danny Andrews",
+  "files": [
+    "[GLOB_TO_PUBLISH1]",
+    "[GLOB_TO_PUBLISH2]",
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danny-andrews/[NAME].git"
+  },
+  "scripts": {
+    "build": "[BUILD COMMAND]",
+    "ci": "yarn lint && yarn test",
+    "demo": "[BUILD COMMAND]",
+    "lint": "[LINT COMMAND]",
+    "test": "[TEST COMMAND]"
+  },
+  "devDependencies": {
+    "sort-package-json": "^1.6.0"
+  }
+}
