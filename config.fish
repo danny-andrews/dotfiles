@@ -20,6 +20,10 @@ function deps-of-deps
   yarn info $argv[1] | grep dependencies -A 15
 end
 
+# Count lines of code
+# find DIR -name PATTERN -not -path EXCLUDE_PATTERN | xargs wc -l
+# Example: find . -name '*.js' -not -path '**/__tests__/*' | xargs wc -l
+
 # Suppress welcome message
 set -x fish_greeting ""
 
@@ -31,15 +35,6 @@ set -x PATH $PATH /usr/local/bin
 
 # Yarn
 set -x PATH $PATH (yarn global bin)
-
-# Node Modules
-set -x PATH $PATH /usr/local/lib/node_modules
-
-# Python
-set -x PATH $PATH /Library/Python/2.7/site-packages
-
-# RVM
-set -x PATH $PATH ~/.rvm/bin
 
 # Oh My Fish
 set -q XDG_DATA_HOME
