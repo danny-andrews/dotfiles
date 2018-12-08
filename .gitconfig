@@ -13,9 +13,7 @@
   br = branch
   pu = push -u
   l = log --color --pretty=format:'%h %an %s %ad'
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
   fixup = commit --amend
-  addall = add . --all
   refreshremotes = remote update origin --prune
   deleteremote = push origin --delete
   partialdiff = diff --color-words
