@@ -20,6 +20,20 @@ function deps-of-deps
   yarn info $argv[1] | grep dependencies -A 15
 end
 
+function delete-merged
+  git branch --merged | grep -v -E 'master|\*' | xargs -n 1 git branch -d
+end
+
+function tabs-to-spaces
+  for path in ./src/**/*.css
+    expand -t 2 "$path" | sponge "$path"
+  end
+end
+
+function sort-contents
+  du -d 1 $argv[1] | sort -n -r
+end
+
 # Count lines of code
 # find DIR -name PATTERN -not -path EXCLUDE_PATTERN | xargs wc -l
 # Example: find . -name '*.js' -not -path '**/__tests__/*' | xargs wc -l
