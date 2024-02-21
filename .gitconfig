@@ -1,0 +1,20 @@
+[user]
+	email = lunde.andrews@gmail.com
+	name = Danny Andrews
+[push]
+	default = simple
+	autosetupRemote = true
+[alias]
+	co = checkout
+	br = branch
+	di = diff
+	ci = commit
+	st = status
+  l = log
+  fixup = commit --amend
+[init]
+	defaultBranch = main
+[pager]
+	branch = false
+[core]
+  editor = code --wait

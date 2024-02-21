@@ -1,0 +1,70 @@
+{
+    "editor.detectIndentation": false,
+    "editor.rulers": [
+        80
+    ],
+    "editor.tabSize": 2,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.fontSize": 20,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.customGlyphs": false,
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+    "javascript.suggest.autoImports": false,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "search.exclude": {
+        "**/package-lock.json": true
+    },
+    "editor.fontSize": 14,
+    "workbench.startupEditor": "none",
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "debug.inlineValues": "on",
+    "editor.snippetSuggestions": "top",
+    // For GMark
+    "[markdown]": {
+        "editor.snippetSuggestions": "top",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.formatOnSave": false
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[dockercompose]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "cSpell.enableFiletypes": [
+        "!javascript"
+    ],
+    "cSpell.enabledLanguageIds": [
+        "markdown"
+    ],
+    "cSpell.userWords": [
+        "callout",
+        "Linearithmic",
+        "nums",
+        "pseudocode",
+        "subarray",
+        "subarrays"
+    ],
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "workbench.statusBar.visible": false
+}
