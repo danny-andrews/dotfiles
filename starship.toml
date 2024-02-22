@@ -1,9 +1,41 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Inserts a blank line between shell prompts
-add_newline = true
+format = """
+[](orange)\
+$directory\
+[](bg:aqua fg:orange)\
+$git_branch\
+$git_status\
+[](fg:aqua bg:blue)\
+$nodejs\
+$python\
+[ ](fg:blue)\
+$character
+"""
 
-# Replace the '❯' symbol in the prompt with '➜'
-[character]
-success_symbol = '[➜](bold green) '
-error_symbol = '[✗](bold red) '
+add_newline = false
+
+palette = 'colors'
+
+[palettes.colors]
+blue = '#458588'
+aqua = '#689d6a'
+orange = '#d65d0e'
+
+[line_break]
+disabled = true
+
+[git_branch]
+symbol = ""
+style = "bg:aqua"
+format = '[[ $symbol $branch ](bg:aqua)]($style)'
+
+[git_status]
+style = "bg:aqua"
+format = '[[($all_status$ahead_behind)](bg:aqua) ]($style)'
+
+[directory]
+style = "bg:orange"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
