@@ -5,11 +5,7 @@ format = """
 $directory\
 [](bg:aqua fg:orange)\
 $git_branch\
-$git_status\
-[](fg:aqua bg:blue)\
-$nodejs\
-$python\
-[ ](fg:blue)\
+[ ](fg:aqua)\
 $character
 """
 
@@ -29,10 +25,6 @@ disabled = true
 symbol = ""
 style = "bg:aqua"
 format = '[[ $symbol $branch ](bg:aqua)]($style)'
-
-[git_status]
-style = "bg:aqua"
-format = '[[($all_status$ahead_behind)](bg:aqua) ]($style)'
 
 [directory]
 style = "bg:orange"
