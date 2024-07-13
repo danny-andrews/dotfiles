@@ -1,20 +1,16 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](orange)\
 $directory\
-[](bg:aqua fg:orange)\
 $git_branch\
-[ ](fg:aqua)\
-$character
+\n$character
 """
 
-add_newline = false
+add_newline = true
 
 palette = 'colors'
 
 [palettes.colors]
-blue = '#458588'
 aqua = '#689d6a'
 orange = '#d65d0e'
 
@@ -22,12 +18,13 @@ orange = '#d65d0e'
 disabled = true
 
 [git_branch]
-symbol = ""
-style = "bg:aqua"
-format = '[[ $symbol $branch ](bg:aqua)]($style)'
+format = '[  $branch ](bg:aqua)'
 
 [directory]
-style = "bg:orange"
-format = "[ $path ]($style)"
+format = "[  $path ](bg:orange)"
 truncation_length = 3
 truncation_symbol = "…/"
+
+[character]
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '

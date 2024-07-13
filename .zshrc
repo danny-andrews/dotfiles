@@ -14,3 +14,14 @@ alias get_yt_audio='youtube-dl --extract-audio --audio-format=mp3 --output="SONG
 
 # Useful commands
 # lsof -i :portNumber
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/Users/danny/.bun/_bun" ] && source "/Users/danny/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
