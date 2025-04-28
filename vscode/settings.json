@@ -1,36 +1,48 @@
 {
-  "editor.fontFamily": "CaskaydiaCove Nerd Font, Menlo, Monaco, 'Courier New', monospace",
-  "eslint.enable": true,
-  "eslint.lintTask.enable": true,
-  // "eslint.experimental.useFlatConfig": true,
-  "editor.detectIndentation": false,
-  "editor.rulers": [80],
+  /* Editor */
   "editor.tabSize": 2,
+  "editor.fontSize": 14,
+  "editor.rulers": [80, 100],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.renderWhitespace": "none",
+  "editor.formatOnSave": true,
+
+  /* Language-conditional */
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+
+  /* Language-specific */
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
+
   "security.workspace.trust.untrustedFiles": "open",
-  "terminal.integrated.fontSize": 20,
-  "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.customGlyphs": false,
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-  "javascript.suggest.autoImports": false,
   "search.exclude": {
     "**/package-lock.json": true
   },
-  "editor.fontSize": 14,
   "workbench.startupEditor": "none",
-  "editor.formatOnSave": true,
   "debug.inlineValues": "on",
-  "editor.snippetSuggestions": "top",
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.renderWhitespace": "trailing",
-  "svelte.enable-ts-plugin": true,
   "workbench.activityBar.location": "hidden",
-  "workbench.statusBar.visible": false,
-  "prettier.trailingComma": "all"
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "prettier.trailingComma": "all",
+  "search.searchEditor.defaultNumberOfContextLines": 4,
+
+  /* Extension-specific */
+  "Prettier-SQL.expressionWidth": 80,
+  "Prettier-SQL.keywordCase": "upper",
+  "git.openRepositoryInParentFolders": "never",
+  "nanoid-generator.length": 21,
+  "chat.agent.enabled": false,
+  "github.copilot.selectedCompletionModel": ""
 }
